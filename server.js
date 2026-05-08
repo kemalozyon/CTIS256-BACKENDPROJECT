@@ -31,6 +31,7 @@ app.use("/api/cart", consumerRouter)
 
 app.use(express.static(path.join(__dirname, "views")))
 app.use("/uploads", express.static(path.join(__dirname, "uploads")))
+app.use(express.static("public"))
 
 app.get("/", (_req, res) => {
     res.sendFile(path.join(__dirname, "views", "index.html"))
